@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <meta name="theme-color" content="#08090c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent">
+
+    <title>ESCAPE | Police Chase</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main id="gameContainer">
+
+        <canvas id="gameCanvas"></canvas>
+
+        <div id="hud">
+            <div class="hud-item">
+                <span class="hud-label">VELOCIDAD</span>
+                <div>
+                    <strong id="speed">45</strong>
+                    <small>km/h</small>
+                </div>
+            </div>
+
+            <div class="hud-item hud-right">
+                <span class="hud-label">DISTANCIA</span>
+                <div>
+                    <strong id="distance">0</strong>
+                    <small>m</small>
+                </div>
+            </div>
+        </div>
+
+        <div id="policeWarning">
+            <span class="warning-dot"></span>
+            POLICÍA EN PERSECUCIÓN
+        </div>
+
+        <div id="startScreen" class="overlay">
+            <div class="overlay-content">
+                <span class="eyebrow">POLICE CHASE</span>
+                <h1>ESCAPE<span>.</span></h1>
+
+                <button id="startButton">
+                    COMENZAR
+                    <span>→</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="gameOverScreen" class="overlay hidden">
+            <div class="overlay-content">
+                <span class="eyebrow">FIN DE LA PERSECUCIÓN</span>
+                <h2>GAME OVER</h2>
+
+                <p>
+                    Recorriste
+                    <strong id="finalDistance">0</strong>
+                    metros.
+                </p>
+
+                <button id="restartButton">
+                    REINTENTAR
+                    <span>↻</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="touchControls">
+            <button id="leftButton" aria-label="Mover a la izquierda">
+                ←
+            </button>
+            <button id="rightButton" aria-label="Mover a la derecha">
+                →
+            </button>
+        </div>
+
+    </main>
+
+    <script src="js/player.js"></script>
+    <script src="js/police.js"></script>
+    <script src="js/traffic.js"></script>
+    <script src="js/game.js"></script>
+
+</body>
+</html>
